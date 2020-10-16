@@ -2,67 +2,10 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import {BrowserRouter, NavLink, Route} from "react-router-dom";
-
-const Menu = ()=>{
-  return <ul>
-    <li><NavLink className="nav-link" to="/profile">Профиль</NavLink></li>
-    <li><NavLink className="nav-link" to="/settings">Настройки</NavLink></li>
-    <li><NavLink className="nav-link" to="/users">Пользователи</NavLink></li>
-  </ul>
-}
-
-const Profile = ()=>{
-    return <div className="row">
-        <div className="col-2">
-            <img width="100%" src="https://i.pinimg.com/originals/51/f6/fb/51f6fb256629fc755b8870c801092942.png" alt=""/>
-        </div>
-        <div className="col-10">
-            <h1>Иван Иванов</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis dolorum quis voluptate. Amet asperiores facilis natus repudiandae sed unde voluptatem. Ad commodi dolor ea eius, labore porro ratione similique sit?</p>
-        </div>
-    </div>
-}
-
-const Settings = ()=>{
-    return <div>
-        <p>Имя: Иван</p>
-        <p>Фамилия: Иванов</p>
-        <p>E-mail: ivanov@gmail.com</p>
-    </div>
-}
-
-const Users = ()=>{
-    return <table className="table">
-        <thead>
-        <tr>
-            <th scope="col">#</th>
-            <th scope="col">Имя</th>
-            <th scope="col">Фамилия</th>
-            <th scope="col">Username</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-        </tr>
-        <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-        </tr>
-        <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
-        </tr>
-        </tbody>
-    </table>
-}
+import {Menu} from "./components/Menu";
+import {Profile} from "./components/Profile";
+import {Settings} from "./components/Settings";
+import {Users} from "./components/Users";
 
 function App() {
   return (
